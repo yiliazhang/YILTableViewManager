@@ -19,6 +19,7 @@
 		189E9F4F20B7C5660082D8F8 /* OneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9F4A20B7C5650082D8F8 /* OneTableViewCell.swift */; };
 		189E9F5020B7C5660082D8F8 /* ThreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9F4B20B7C5660082D8F8 /* ThreeTableViewCell.swift */; };
 		189E9F5120B7C5660082D8F8 /* TwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9F4C20B7C5660082D8F8 /* TwoTableViewCell.swift */; };
+		189E9F7420B804EA0082D8F8 /* OneTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9F7320B804EA0082D8F8 /* OneTableViewCellTest.swift */; };
 		1DAA754D6E99C358CE7F70A0 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0460228379BA9AB2850EBC3D /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		189E9F4A20B7C5650082D8F8 /* OneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneTableViewCell.swift; sourceTree = "<group>"; };
 		189E9F4B20B7C5660082D8F8 /* ThreeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeTableViewCell.swift; sourceTree = "<group>"; };
 		189E9F4C20B7C5660082D8F8 /* TwoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoTableViewCell.swift; sourceTree = "<group>"; };
+		189E9F7320B804EA0082D8F8 /* OneTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewCellTest.swift; sourceTree = "<group>"; };
 		7B52F320107BA3D15A3267D8 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		BC79E238FCC6524586E6A568 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 			children = (
 				189E9F3B20B7C5350082D8F8 /* DemoTests.swift */,
 				189E9F3D20B7C5350082D8F8 /* Info.plist */,
+				189E9F7320B804EA0082D8F8 /* OneTableViewCellTest.swift */,
 			);
 			path = DemoTests;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189E9F7420B804EA0082D8F8 /* OneTableViewCellTest.swift in Sources */,
 				189E9F3C20B7C5350082D8F8 /* DemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +470,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 685DPV4URE;
 				INFOPLIST_FILE = Demo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yilia.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -483,7 +490,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 685DPV4URE;
 				INFOPLIST_FILE = Demo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yilia.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -499,7 +509,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 685DPV4URE;
 				INFOPLIST_FILE = DemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yilia.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -516,7 +530,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 685DPV4URE;
 				INFOPLIST_FILE = DemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yilia.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

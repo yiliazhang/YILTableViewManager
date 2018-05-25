@@ -169,8 +169,9 @@ extension TableViewManager: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
 
-        if let cellOne = cellOne as? ViewStatusable {
-            cellOne.config(modelManager.viewStatus, data: modelManager.data)
+        if var cellTwo = cellOne as? ViewStatusable {
+            cellTwo.modelManager = modelManager
+            cellTwo.config(modelManager.viewStatus, data: modelManager.data)
         }
 
         return cellOne
@@ -182,7 +183,7 @@ extension TableViewManager: UITableViewDelegate, UITableViewDataSource {
             return
         }
         if let didSelect = modelManager.didSelect {
-            didSelect(tableView, indexPath)
+            didSelect(tableView, indexPath, modelManager.data)
         }
     }
 

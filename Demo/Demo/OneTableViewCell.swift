@@ -11,7 +11,7 @@ import YILTableViewManager
 // MARK: - cell
 class OneTableViewCell: UITableViewCell {
     static let reuseIdentifier: String = NSStringFromClass(OneTableViewCell.self)
-    var model: Any?
+    fileprivate var _modelManager: ModelManager?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,7 +25,18 @@ class OneTableViewCell: UITableViewCell {
 }
 
 extension OneTableViewCell: ViewStatusable {
+
+    var modelManager: ModelManager? {
+        get {
+            return _modelManager
+        }
+        set(newValue) {
+            _modelManager = newValue
+        }
+    }
+
     func config(_ viewStatus : ViewStatus, data: Any?) {
+        self.selectionStyle = .none
         var title = "未知Title"
         var value = "未知value"
 

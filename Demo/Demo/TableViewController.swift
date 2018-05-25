@@ -13,10 +13,20 @@ func delay(_ delay:Double, closure:@escaping()->()) {
 }
 
 class TableViewController: UITableViewController {
+
     var tableViewManager = TableViewManager()
     lazy var itemOne : ModelManager = {
         let manager = ModelManager("cellOne", cellReuseIdenfier: OneTableViewCell.reuseIdentifier, cellClassString: NSStringFromClass(OneTableViewCell.self))
-        manager.didSelect = {(tableView, indexPath) in
+        manager.didSelect = { [weak self] (tableView, indexPath, data) in
+            if let strongSelf = self {
+                let viewController = ViewController()
+                if let data = data as? [String: String],
+                    let title = data["title"] {
+                    viewController.title = title
+                }
+
+                strongSelf.navigationController?.pushViewController(viewController, animated: true)
+            }
             print("点我了")
         }
 
@@ -28,7 +38,15 @@ class TableViewController: UITableViewController {
     }()
 
     lazy var itemThree : ThreeModelManager = {
-        let manager =  ThreeModelManager("cellThree", cellReuseIdenfier: OneTableViewCell.reuseIdentifier, cellClassString: NSStringFromClass(OneTableViewCell.self))
+        let manager =  ThreeModelManager("cellThree", cellReuseIdenfier: ThreeTableViewCell.reuseIdentifier, cellNib: UINib(nibName: "ThreeTableViewCell", bundle: nil))
+        manager.myAction = {[weak self] (data, sender) in
+            if let strongSelf = self {
+                let alert = UIAlertController(title: "你点到我了！", message: "有什么需要吗？", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okAction)
+                strongSelf.navigationController?.present(alert, animated: true)
+            }
+        }
         return manager
     }()
 
@@ -44,19 +62,16 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "示例"
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
         tableViewManager.tableView = tableView
-        tableViewManager.append([itemOne, itemTwo])
+        tableViewManager.append([itemOne, itemTwo, itemThree])
 
-        itemThree.myAction = {(item, button) in
-            print("点我了")
-        }
+        updateOneItem(itemOne)
+        updateTwoItem(itemTwo)
 
-
-        updateItemOne()
-        updateItemTwo()
-        updateItemThree()
+        ///tableViewManager insert 测试
 //        delay(1) {
 //            self.tableViewManager.insert(self.itemFive, at: 2)
 //            self.tableViewManager.insert(self.itemSix, at: 3)
@@ -65,6 +80,7 @@ class TableViewController: UITableViewController {
 //        }
 
 
+        ///tableViewManager insert 测试
 //        delay(1) {
 //            self.tableViewManager.insert([self.itemFour, self.itemFive, self.itemSix], at: 3)
 //            self.tableViewManager.insert([self.itemFour, self.itemFive, self.itemSix], at: 2)
@@ -73,21 +89,25 @@ class TableViewController: UITableViewController {
 //        }
 
 
+        ///tableViewManager insert 测试
 //        delay(1) {
 //            self.tableViewManager.remove(at: 1)
 //            self.tableView.reloadData()
 //        }
 
+        ///tableViewManager removeSubrange 测试
 //        delay(1) {
 //            self.tableViewManager.removeSubrange(Range(uncheckedBounds: (3, 5)))
 //            self.tableView.reloadData()
 //        }
 
-
+        ///tableViewManager remove 测试
 //        delay(1) {
 //           self.tableViewManager.remove(self.itemSix)
 //            self.tableView.reloadData()
 //        }
+
+        ///tableViewManager removeAll 测试
 //        delay(13) {
 //            self.tableViewManager.removeAll()
 //            self.tableView.reloadData()
@@ -99,44 +119,33 @@ class TableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func updateItemOne() {
-        itemOne.config(["title": "idle", "value": "-idle value-"], forViewStatus: .idle)
-        itemOne.config(["title": "loading", "value": "-loading value-"], forViewStatus: .loading)
+    /// itemOne 状态更新 测试
+    func updateOneItem(_ item: ModelManager) {
+        item[.idle] = ["title": "idle", "value": "-idle value-"]
+        item[.loading] = ["title": "loading", "value": "-loading value-"]
         delay(2) {
-            self.itemOne.viewStatus = .loading
+            item.viewStatus = .loading
         }
 
         delay(6) {
-            self.itemOne.config(["title": "successfull", "value": "-successfull value-"], forViewStatus: .successfull)
-            self.itemOne.viewStatus = .successfull
+            item[.successfull] = ["title": "successfull", "value": "-successfull value-"]
+            item.viewStatus = .successfull
         }
     }
 
-
-    func updateItemTwo() {
-        itemTwo.config(["title": "idle", "image": "猜你喜欢", "value": "-idle value-"], forViewStatus: .idle)
-        itemTwo.config(["title": "loading","image": "喷漆修复", "value": ""], forViewStatus: .loading)
+    /// itemTwo 状态更新 测试
+    func updateTwo(_ item: ModelManager) {
+        item[.idle] = ["title": "idle", "image": "汽车保养", "value": "-idle value-"]
+        item[.loading] = ["title": "loading","image": "猜你喜欢", "value": ""]
         delay(3) {
-            self.itemTwo.viewStatus = .loading
+            item.viewStatus = .loading
         }
 
         delay(7) {
             let value = "相比 MVC，MVP在层次划分上更加清晰了，不会出现一人身兼二职的情况（有些单元测试的童鞋，会发现单元测试用例更好写了）。在此处你可以看到 View 和 Model 之间是互不知道对方存在的，这样应对变更的好处更大，很多时候都是 View 层的变化，而 Model 层发生的变化会相对较少，遵循 MVP 的结构开发后，改起来代码来也没那么蛋疼。"
-            self.itemTwo.config(["title": "successfull", "image": "赞同激活", "value": value], forViewStatus: .successfull)
-            self.itemTwo.viewStatus = .successfull
+            item[.successfull] = ["title": "successfull", "image": "一站式服务", "value": value]
+            item.viewStatus = .successfull
         }
     }
 
-    func updateItemThree() {
-        itemThree.config(["title": "~~~idle", "value": "~~~-idle value-"], forViewStatus: .idle)
-        itemThree.config(["title": "~~~loading", "value": "~~~-loading value-"], forViewStatus: .loading)
-        delay(5) {
-            self.itemThree.viewStatus = .loading
-        }
-
-        delay(8) {
-            self.itemThree.config(["title": "~~~successfull", "value": "~~~-successfull value-"], forViewStatus: .successfull)
-            self.itemThree.viewStatus = .successfull
-        }
-    }
 }

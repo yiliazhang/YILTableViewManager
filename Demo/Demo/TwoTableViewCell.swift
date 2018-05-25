@@ -17,6 +17,8 @@ class TwoTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
 
+    fileprivate var _modelManager: ModelManager?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,8 +31,18 @@ class TwoTableViewCell: UITableViewCell {
 }
 
 extension TwoTableViewCell: ViewStatusable {
+    var modelManager: ModelManager? {
+        get {
+            return _modelManager
+        }
+        set(newValue) {
+            _modelManager = newValue
+        }
+    }
+
 //    typealias Element = [String: String]
     func config(_ viewStatus : ViewStatus, data: Any?) {
+        self.selectionStyle = .none
         var title = "未知Title"
         var value = "未知value"
         var image = "优惠券"

@@ -19,12 +19,13 @@ public enum ViewStatus: String {
 public protocol ViewStatusable {
 //    associatedtype Element: Modelable
 //    func configStatus(viewStatus: ViewStatus, data: Element?)
+    var modelManager: ModelManager? { get set }
     func config(_ viewStatus: ViewStatus, data: Any?)
 }
 
 open class ModelManager: NSObject {
-    open var didSelect: ((_ tableView: UITableView, _ indexPath: IndexPath) -> Void)?
-//    open var didDeselect: ((_ tableView: UITableView, _ indexPath: IndexPath) -> Void)?
+    open var didSelect: ((_ tableView: UITableView, _ indexPath: IndexPath, _ data: Any?) -> Void)?
+//    open var didDeselect: ((_ tableView: UITableView, _ indexPath: IndexPath, data: Any) -> Void)?
 
     fileprivate var  _viewStatus: ViewStatus = .idle
 
@@ -64,8 +65,8 @@ open class ModelManager: NSObject {
         return (_cellNib != nil)
     }
 
-    var data: Any? {
-        return itemWithViewStatus[viewStatus]
+    public var data: Any? {
+        return _itemWithViewStatus[viewStatus]
     }
 
 //    private init(_ identifier: String, cellReuseIdenfier: String) {
@@ -102,12 +103,18 @@ open class ModelManager: NSObject {
         self._cellNib = cellNib
     }
 
-    public var itemWithViewStatus: [ViewStatus: Any] = [:]
-    public func config(_ data: Any?, forViewStatus: ViewStatus) {
-        if let data = data {
-            itemWithViewStatus[forViewStatus] = data
-        } else {
-            itemWithViewStatus.removeValue(forKey: forViewStatus)
+    fileprivate var _itemWithViewStatus: [ViewStatus: Any] = [:]
+
+    public subscript(identifier: ViewStatus) -> Any? {
+        get {
+            return _itemWithViewStatus[identifier]
+        }
+        set {
+            if let newValue = newValue {
+                _itemWithViewStatus[identifier] = newValue
+            } else {
+                _itemWithViewStatus.removeValue(forKey: identifier)
+            }
         }
     }
 }
