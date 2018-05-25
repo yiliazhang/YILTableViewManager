@@ -18,7 +18,7 @@ public enum ViewStatus: String {
 
 protocol Modelable {}
 
-public public protocol ViewStatusable {
+public protocol ViewStatusable {
 //    associatedtype Element: Modelable
 //    func configStatus(viewStatus: ViewStatus, data: Element?)
     func config(_ viewStatus: ViewStatus, data: Any?)
