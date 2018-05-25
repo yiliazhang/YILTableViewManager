@@ -23,10 +23,6 @@ open class TableViewManager: NSObject {
     ///用户所有车辆
     fileprivate var _items: [ModelManager] = []
 
-    override init() {
-        super.init()
-    }
-
     deinit {
         _items.forEach { (item) in
             item.removeObserver(self, forKeyPath: key)
