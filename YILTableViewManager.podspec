@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YILTableViewManager"
-  s.version      = "1.0.4"
+  s.version      = "1.0.6"
   s.summary      = "YILTableViewManager是一种灵活展现 cell 多状态的第三方开源库"
 
   # This description is used to generate tags and improve search results.

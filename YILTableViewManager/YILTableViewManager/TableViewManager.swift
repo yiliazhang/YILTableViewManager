@@ -29,7 +29,7 @@ open class TableViewManager: NSObject {
         }
     }
 
-    func insert(_ newElement: ModelManager, at: Int) {
+    open func insert(_ newElement: ModelManager, at: Int) {
         assert(at > 0, "index 必须 >= 0")
 
         newElement.addObserver(self, forKeyPath: key, options: [.new, .old], context: nil)
@@ -40,7 +40,7 @@ open class TableViewManager: NSObject {
         }
     }
 
-    func insert(_ newElements: [ModelManager], at: Int) {
+    open func insert(_ newElements: [ModelManager], at: Int) {
         assert(at > 0, "index 必须 >= 0")
         if newElements.isEmpty {
             return
@@ -52,7 +52,7 @@ open class TableViewManager: NSObject {
         }
     }
 
-    func remove(at: Int) {
+    open func remove(at: Int) {
         assert(at > 0, "index 必须 >= 0")
         if _items.count <= at {
             return
@@ -62,7 +62,7 @@ open class TableViewManager: NSObject {
         _items.remove(at: at)
     }
 
-    func removeSubrange(_ range: Range<Int>) {
+    open func removeSubrange(_ range: Range<Int>) {
         for (index, item) in _items.enumerated().reversed() {
             if range.contains(index) {
                 item.removeObserver(self, forKeyPath: key)
@@ -72,7 +72,7 @@ open class TableViewManager: NSObject {
     }
 
     /// 注册数据
-    func append(_ newElement: ModelManager) {
+    open func append(_ newElement: ModelManager) {
         if !_items.contains(where: { (model) -> Bool in
             model.identifier == newElement.identifier
         }) {
@@ -94,7 +94,7 @@ open class TableViewManager: NSObject {
     }
 
     /// 注册数据组
-    func append(_ contentOf: [ModelManager]) {
+    open func append(_ contentOf: [ModelManager]) {
         if contentOf.isEmpty {
             return
         }
@@ -105,7 +105,7 @@ open class TableViewManager: NSObject {
 
 
     ///移除所有
-    func removeAll() {
+    open func removeAll() {
         _items.forEach { (model) in
             model.removeObserver(self, forKeyPath: "viewStatusString")
         }
@@ -113,7 +113,7 @@ open class TableViewManager: NSObject {
     }
 
     ///移除 数据
-    func remove(_ element: ModelManager) {
+    open func remove(_ element: ModelManager) {
         if let tmpItem = _items.first(where: { (model) -> Bool in
             model.identifier == element.identifier
         }) {
