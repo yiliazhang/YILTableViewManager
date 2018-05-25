@@ -32,6 +32,6 @@ extension UIImage: YILCompatible{}
 extension UIView: YILCompatible{}
 extension ModelManager: YILCompatible{}
 extension TableViewManager: YILCompatible{}
-extension ViewStatusable: YILCompatible{}
-extension ViewStatus: YILCompatible{}
+//extension ViewStatusable: YILCompatible{}
+//extension ViewStatus: YILCompatible{}
 extension UIColor: YILCompatible{}
