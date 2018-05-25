@@ -10,6 +10,8 @@
 		189E9F0620B7BEBD0082D8F8 /* YILTableViewManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189E9EFC20B7BEBD0082D8F8 /* YILTableViewManager.framework */; };
 		189E9F0B20B7BEBD0082D8F8 /* YILTableViewManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9F0A20B7BEBD0082D8F8 /* YILTableViewManagerTests.swift */; };
 		189E9F0D20B7BEBD0082D8F8 /* YILTableViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 189E9EFF20B7BEBD0082D8F8 /* YILTableViewManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		189E9F1720B7C15F0082D8F8 /* Statusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9F1620B7C15F0082D8F8 /* Statusable.swift */; };
+		189E9F1920B7C1640082D8F8 /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9F1820B7C1640082D8F8 /* TableViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		189E9F0520B7BEBD0082D8F8 /* YILTableViewManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YILTableViewManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189E9F0A20B7BEBD0082D8F8 /* YILTableViewManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YILTableViewManagerTests.swift; sourceTree = "<group>"; };
 		189E9F0C20B7BEBD0082D8F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189E9F1620B7C15F0082D8F8 /* Statusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statusable.swift; sourceTree = "<group>"; };
+		189E9F1820B7C1640082D8F8 /* TableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		189E9EFE20B7BEBD0082D8F8 /* YILTableViewManager */ = {
 			isa = PBXGroup;
 			children = (
+				189E9F1820B7C1640082D8F8 /* TableViewManager.swift */,
+				189E9F1620B7C15F0082D8F8 /* Statusable.swift */,
 				189E9EFF20B7BEBD0082D8F8 /* YILTableViewManager.h */,
 				189E9F0020B7BEBD0082D8F8 /* Info.plist */,
 			);
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					189E9EFB20B7BEBD0082D8F8 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 					189E9F0420B7BEBD0082D8F8 = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -194,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189E9F1720B7C15F0082D8F8 /* Statusable.swift in Sources */,
+				189E9F1920B7C1640082D8F8 /* TableViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +348,7 @@
 		189E9F1120B7BEBD0082D8F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yilia.YILTableViewManager;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +375,7 @@
 		189E9F1220B7BEBD0082D8F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +401,7 @@
 		189E9F1420B7BEBD0082D8F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 685DPV4URE;
 				INFOPLIST_FILE = YILTableViewManagerTests/Info.plist;
@@ -407,6 +420,7 @@
 		189E9F1520B7BEBD0082D8F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 685DPV4URE;
 				INFOPLIST_FILE = YILTableViewManagerTests/Info.plist;
