@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YILTableViewManager"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "YILTableViewManager是一种灵活展现 cell 多状态的第三方开源库"
 
   # This description is used to generate tags and improve search results.
@@ -55,7 +55,7 @@ Pod::Spec.new do |s|
   s.author             = { "yilia.zhang" => "yilia_zhang_0825@163.com" }
   # Or just: s.author    = "yilia.zhang"
   # s.authors            = { "yilia.zhang" => "yilia_zhang_0825@163.com" }
-  s.social_media_url   = "https://www.jianshu.com/u/33c50a4e82e6"
+  # s.social_media_url   = "https://www.jianshu.com/u/33c50a4e82e6"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
