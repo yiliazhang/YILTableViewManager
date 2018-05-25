@@ -16,13 +16,13 @@ public enum ViewStatus: String {
     case failure = "failure"
 }
 
-protocol Modelable {}
-
 public protocol ViewStatusable {
 //    associatedtype Element: Modelable
 //    func configStatus(viewStatus: ViewStatus, data: Element?)
     func config(_ viewStatus: ViewStatus, data: Any?)
 }
+
+protocol Modelable {}
 
 open class ModelManager: NSObject {
     open var didSelect: ((_ tableView: UITableView, _ indexPath: IndexPath) -> Void)?
