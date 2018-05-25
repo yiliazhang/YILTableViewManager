@@ -52,9 +52,9 @@ extension OneTableViewCell: ViewStatusable {
             case .loading:
                 title = "loading Title"
                 value = "loading value"
-            case .successfull:
-                title = "successfull Title"
-                value = "successfull value"
+            case .success:
+                title = "success Title"
+                value = "success value"
 
             case .failure:
                 title = "failure Title"

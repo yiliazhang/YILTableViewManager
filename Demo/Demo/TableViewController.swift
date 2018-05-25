@@ -37,6 +37,7 @@ class TableViewController: UITableViewController {
         return ModelManager("cellTwo", cellReuseIdenfier: TwoTableViewCell.reuseIdentifier, cellNib: UINib(nibName: "TwoTableViewCell", bundle: nil))
     }()
 
+
     lazy var itemThree : ThreeModelManager = {
         let manager =  ThreeModelManager("cellThree", cellReuseIdenfier: ThreeTableViewCell.reuseIdentifier, cellNib: UINib(nibName: "ThreeTableViewCell", bundle: nil))
         manager.myAction = {[weak self] (data, sender) in
@@ -50,11 +51,9 @@ class TableViewController: UITableViewController {
         return manager
     }()
 
-
     lazy var itemFour : ModelManager = {
-        return ModelManager("cellFour", cellReuseIdenfier: OneTableViewCell.reuseIdentifier, cellClassString: NSStringFromClass(OneTableViewCell.self))
+        return ModelManager("cellFour", cellReuseIdenfier: TwoTableViewCell.reuseIdentifier, cellNib: UINib(nibName: "TwoTableViewCell", bundle: nil))
     }()
-
 
     lazy var itemFive : ModelManager = {
         return ModelManager("cellFive", cellReuseIdenfier: OneTableViewCell.reuseIdentifier, cellClassString: NSStringFromClass(OneTableViewCell.self))
@@ -66,10 +65,12 @@ class TableViewController: UITableViewController {
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
         tableViewManager.tableView = tableView
-        tableViewManager.append([itemOne, itemTwo, itemThree])
+        tableViewManager.append([itemOne, itemTwo, itemFour, itemThree])
 
         updateOneItem(itemOne)
         updateTwoItem(itemTwo)
+        updateFourItem(itemFour)
+
 
         ///tableViewManager insert 测试
 //        delay(1) {
@@ -122,29 +123,44 @@ class TableViewController: UITableViewController {
     /// itemOne 状态更新 测试
     func updateOneItem(_ item: ModelManager) {
         item[.idle] = ["title": "idle", "value": "-idle value-"]
-        item[.loading] = ["title": "loading", "value": "-loading value-"]
+        item[.loading] = ["title": "loading...", "value": "-loading value-"]
+        delay(1.5) {
+            item.viewStatus = .loading
+        }
+
+        delay(3) {
+            item[.success] = ["title": "success", "value": "-success value-"]
+            item.viewStatus = .success
+        }
+    }
+
+    ///状态更新 测试
+    func updateTwoItem(_ item: ModelManager) {
+        item[.idle] = ["title": "idle", "image": "汽车保养", "value": "-idle value-"]
+        item[.loading] = ["title": "loading","image": "猜你喜欢", "value": ""]
         delay(2) {
             item.viewStatus = .loading
         }
 
-        delay(6) {
-            item[.successfull] = ["title": "successfull", "value": "-successfull value-"]
-            item.viewStatus = .successfull
+        delay(4) {
+            let value = "相比 MVC，MVP在层次划分上更加清晰了，不会出现一人身兼二职的情况（有些单元测试的童鞋，会发现单元测试用例更好写了）。在此处你可以看到 View 和 Model 之间是互不知道对方存在的，这样应对变更的好处更大，很多时候都是 View 层的变化，而 Model 层发生的变化会相对较少，遵循 MVP 的结构开发后，改起来代码来也没那么蛋疼。"
+            item[.success] = ["title": "success", "image": "一站式服务", "value": value]
+            item.viewStatus = .success
         }
     }
 
-    /// itemTwo 状态更新 测试
-    func updateTwoItem(_ item: ModelManager) {
-        item[.idle] = ["title": "idle", "image": "汽车保养", "value": "-idle value-"]
-        item[.loading] = ["title": "loading","image": "猜你喜欢", "value": ""]
+    ///状态更新 测试
+    func updateFourItem(_ item: ModelManager) {
+        item[.idle] = ["title": "idle 状态", "image": "汽车保养", "value": "-idle value-"]
+        item[.loading] = ["title": "loading...","image": "猜你喜欢", "value": ""]
         delay(3) {
             item.viewStatus = .loading
         }
 
-        delay(7) {
-            let value = "相比 MVC，MVP在层次划分上更加清晰了，不会出现一人身兼二职的情况（有些单元测试的童鞋，会发现单元测试用例更好写了）。在此处你可以看到 View 和 Model 之间是互不知道对方存在的，这样应对变更的好处更大，很多时候都是 View 层的变化，而 Model 层发生的变化会相对较少，遵循 MVP 的结构开发后，改起来代码来也没那么蛋疼。"
-            item[.successfull] = ["title": "successfull", "image": "一站式服务", "value": value]
-            item.viewStatus = .successfull
+        delay(5) {
+            let value = "女孩子之所以会问一些奇奇怪怪的问题，其实只是想要自己的另一半承认自己最美最重要而已啊。你要是问“之前说过的话为什么还要反复说”，那就太单纯了。就像你为什么昨天吃过了饭今天还要吃一样，女孩子就是要不停地收到你对她的爱意，才会对感情充满安全感。"
+            item[.failure] = ["title": "~ failure ~", "image": "汽车美容", "value": value]
+            item.viewStatus = .failure
         }
     }
 

@@ -166,7 +166,7 @@ extension TableViewManager: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: modelManager.cellReuseIdentifier)
         guard let cellOne = cell else {
             assert(cell != nil, "cell 不存在")
-            return UITableViewCell()
+            return UITableViewCell(style: .value1, reuseIdentifier: modelManager.cellReuseIdentifier)
         }
 
         if var cellTwo = cellOne as? ViewStatusable {
@@ -179,7 +179,7 @@ extension TableViewManager: UITableViewDelegate, UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let modelManager = _items[indexPath.row]
-        if modelManager.viewStatus != .successfull {
+        if modelManager.viewStatus != .success {
             return
         }
         if let didSelect = modelManager.didSelect {
@@ -189,7 +189,7 @@ extension TableViewManager: UITableViewDelegate, UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
 //        let modelManager = _items[indexPath.row]
-//        if modelManager.viewStatus != .successfull {
+//        if modelManager.viewStatus != .success {
 //            return
 //        }
 //        if let didDeselect = modelManager.didDeselect {

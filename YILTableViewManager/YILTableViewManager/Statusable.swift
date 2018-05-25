@@ -12,7 +12,7 @@ import UIKit
 public enum ViewStatus: String {
     case idle = "idle"
     case loading = "loading"
-    case successfull = "successfull"
+    case success = "success"
     case failure = "failure"
 }
 
