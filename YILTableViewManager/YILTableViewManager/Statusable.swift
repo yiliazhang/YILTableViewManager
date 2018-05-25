@@ -18,7 +18,7 @@ public enum ViewStatus: String {
 
 protocol Modelable {}
 
-protocol ViewStatusable {
+public public protocol ViewStatusable {
 //    associatedtype Element: Modelable
 //    func configStatus(viewStatus: ViewStatus, data: Element?)
     func config(_ viewStatus: ViewStatus, data: Any?)
@@ -30,7 +30,7 @@ open class ModelManager: NSObject {
 
     fileprivate var  _viewStatus: ViewStatus = .idle
 
-    var viewStatus: ViewStatus {
+    open var viewStatus: ViewStatus {
         get {
             return _viewStatus
         }

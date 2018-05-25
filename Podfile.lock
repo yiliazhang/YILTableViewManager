@@ -1,5 +1,5 @@
 PODS:
-  - YILTableViewManager (1.0.1)
+  - YILTableViewManager (1.0.2)
 
 DEPENDENCIES:
   - YILTableViewManager
@@ -9,8 +9,8 @@ SPEC REPOS:
     - YILTableViewManager
 
 SPEC CHECKSUMS:
-  YILTableViewManager: 71c855e5a62f755df99a7e7291a153848838957c
+  YILTableViewManager: 82b93331926af69789d19c8c6bf802b8c68fd973
 
 PODFILE CHECKSUM: 7d1df0c6af4a280c2dcf4c67d77a35b72813fb0c
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3
