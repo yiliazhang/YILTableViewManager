@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YILTableViewManager
 class ThreeModelManager: ModelManager {
     open var myAction: ((_ modelManager: ThreeModelManager, _ sender: Any) -> Void)?
 }

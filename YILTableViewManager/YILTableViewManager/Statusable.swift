@@ -22,8 +22,6 @@ public protocol ViewStatusable {
     func config(_ viewStatus: ViewStatus, data: Any?)
 }
 
-protocol Modelable {}
-
 open class ModelManager: NSObject {
     open var didSelect: ((_ tableView: UITableView, _ indexPath: IndexPath) -> Void)?
 //    open var didDeselect: ((_ tableView: UITableView, _ indexPath: IndexPath) -> Void)?
@@ -66,9 +64,8 @@ open class ModelManager: NSObject {
         return (_cellNib != nil)
     }
 
-    fileprivate var _itemWithViewStatus: [ViewStatus: Modelable] = [:]
-    var data: Modelable? {
-        return _itemWithViewStatus[viewStatus]
+    var data: Any? {
+        return itemWithViewStatus[viewStatus]
     }
 
 //    private init(_ identifier: String, cellReuseIdenfier: String) {
@@ -105,23 +102,12 @@ open class ModelManager: NSObject {
         self._cellNib = cellNib
     }
 
-    func config(_ data: Modelable?, forViewStatus: ViewStatus) {
+    public var itemWithViewStatus: [ViewStatus: Any] = [:]
+    public func config(_ data: Any?, forViewStatus: ViewStatus) {
         if let data = data {
-            _itemWithViewStatus[forViewStatus] = data
+            itemWithViewStatus[forViewStatus] = data
         } else {
-            _itemWithViewStatus.removeValue(forKey: forViewStatus)
+            itemWithViewStatus.removeValue(forKey: forViewStatus)
         }
     }
-}
-
-extension Dictionary: Modelable {
-
-}
-
-extension String: Modelable {
-
-}
-
-extension Array: Modelable {
-
 }
