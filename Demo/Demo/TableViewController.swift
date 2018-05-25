@@ -134,7 +134,7 @@ class TableViewController: UITableViewController {
     }
 
     /// itemTwo 状态更新 测试
-    func updateTwo(_ item: ModelManager) {
+    func updateTwoItem(_ item: ModelManager) {
         item[.idle] = ["title": "idle", "image": "汽车保养", "value": "-idle value-"]
         item[.loading] = ["title": "loading","image": "猜你喜欢", "value": ""]
         delay(3) {
