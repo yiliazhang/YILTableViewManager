@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum ViewStatus: String {
+public enum ViewStatus: String {
     case idle = "idle"
     case loading = "loading"
     case successfull = "successfull"
@@ -24,7 +24,7 @@ protocol ViewStatusable {
     func config(_ viewStatus: ViewStatus, data: Any?)
 }
 
-class ModelManager: NSObject {
+open class ModelManager: NSObject {
     open var didSelect: ((_ tableView: UITableView, _ indexPath: IndexPath) -> Void)?
 //    open var didDeselect: ((_ tableView: UITableView, _ indexPath: IndexPath) -> Void)?
 
@@ -105,7 +105,7 @@ class ModelManager: NSObject {
         self._cellNib = cellNib
     }
 
-    open func config(_ data: Modelable?, forViewStatus: ViewStatus) {
+    func config(_ data: Modelable?, forViewStatus: ViewStatus) {
         if let data = data {
             _itemWithViewStatus[forViewStatus] = data
         } else {

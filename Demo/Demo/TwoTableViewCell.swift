@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YILTableViewManager
 
 class TwoTableViewCell: UITableViewCell {
     

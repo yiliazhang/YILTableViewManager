@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TableViewManager: NSObject {
+open class TableViewManager: NSObject {
    open weak var tableView: UITableView? {
         didSet {
             if let tableView = tableView {
@@ -129,7 +129,7 @@ class TableViewManager: NSObject {
         })
     }
 
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let keyPath = keyPath,
             keyPath == "viewStatusString"  {
 
@@ -157,15 +157,15 @@ class TableViewManager: NSObject {
 }
 
 extension TableViewManager: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return _items.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let modelManager = _items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: modelManager.cellReuseIdentifier)
         guard let cellOne = cell else {
@@ -180,7 +180,7 @@ extension TableViewManager: UITableViewDelegate, UITableViewDataSource {
         return cellOne
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let modelManager = _items[indexPath.row]
         if modelManager.viewStatus != .successfull {
             return
@@ -190,7 +190,7 @@ extension TableViewManager: UITableViewDelegate, UITableViewDataSource {
         }
     }
 
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
 //        let modelManager = _items[indexPath.row]
 //        if modelManager.viewStatus != .successfull {
 //            return

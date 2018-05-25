@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class ThreeModelManager: ModelManager {
     open var myAction: ((_ modelManager: ThreeModelManager, _ sender: Any) -> Void)?
 }
@@ -37,6 +36,5 @@ class ThreeTableViewCell: UITableViewCell {
 extension ThreeTableViewCell: ViewStatusable {
     //    typealias Element = [String: String]
     func config(_ viewStatus : ViewStatus, data: Any?) {
-
     }
 }

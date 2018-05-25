@@ -67,14 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = AppInitializer.rootViewController()
         window?.makeKeyAndVisible()
-
-
-        let disposeBag = DisposeBag()
-
-        Observable.range(start: 1, count: 10)
-            .subscribe { print($0) }
-            .disposed(by: disposeBag)
-
         return true
     }
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import YILTableViewManager
 // MARK: - cell
 class OneTableViewCell: UITableViewCell {
     static let reuseIdentifier: String = NSStringFromClass(OneTableViewCell.self)

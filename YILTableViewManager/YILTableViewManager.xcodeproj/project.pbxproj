@@ -12,6 +12,7 @@
 		189E9F0D20B7BEBD0082D8F8 /* YILTableViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 189E9EFF20B7BEBD0082D8F8 /* YILTableViewManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		189E9F1720B7C15F0082D8F8 /* Statusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9F1620B7C15F0082D8F8 /* Statusable.swift */; };
 		189E9F1920B7C1640082D8F8 /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9F1820B7C1640082D8F8 /* TableViewManager.swift */; };
+		189E9F6720B7CC2F0082D8F8 /* YIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9F6620B7CC2F0082D8F8 /* YIL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		189E9F0C20B7BEBD0082D8F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189E9F1620B7C15F0082D8F8 /* Statusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statusable.swift; sourceTree = "<group>"; };
 		189E9F1820B7C1640082D8F8 /* TableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
+		189E9F6620B7CC2F0082D8F8 /* YIL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YIL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		189E9EFE20B7BEBD0082D8F8 /* YILTableViewManager */ = {
 			isa = PBXGroup;
 			children = (
+				189E9F6620B7CC2F0082D8F8 /* YIL.swift */,
 				189E9F1820B7C1640082D8F8 /* TableViewManager.swift */,
 				189E9F1620B7C15F0082D8F8 /* Statusable.swift */,
 				189E9EFF20B7BEBD0082D8F8 /* YILTableViewManager.h */,
@@ -203,6 +206,7 @@
 			files = (
 				189E9F1720B7C15F0082D8F8 /* Statusable.swift in Sources */,
 				189E9F1920B7C1640082D8F8 /* TableViewManager.swift in Sources */,
+				189E9F6720B7CC2F0082D8F8 /* YIL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

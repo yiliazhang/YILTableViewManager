@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YILTableViewManager
 func delay(_ delay:Double, closure:@escaping()->()) {
     DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: closure)
 }
