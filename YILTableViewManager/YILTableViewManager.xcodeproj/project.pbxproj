@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		189E9F0620B7BEBD0082D8F8 /* YILTableViewManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189E9EFC20B7BEBD0082D8F8 /* YILTableViewManager.framework */; };
+		189E9F0B20B7BEBD0082D8F8 /* YILTableViewManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9F0A20B7BEBD0082D8F8 /* YILTableViewManagerTests.swift */; };
+		189E9F0D20B7BEBD0082D8F8 /* YILTableViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 189E9EFF20B7BEBD0082D8F8 /* YILTableViewManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		189E9F0720B7BEBD0082D8F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 189E9EF320B7BEBD0082D8F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 189E9EFB20B7BEBD0082D8F8;
+			remoteInfo = YILTableViewManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		189E9EFC20B7BEBD0082D8F8 /* YILTableViewManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YILTableViewManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		189E9EFF20B7BEBD0082D8F8 /* YILTableViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YILTableViewManager.h; sourceTree = "<group>"; };
+		189E9F0020B7BEBD0082D8F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189E9F0520B7BEBD0082D8F8 /* YILTableViewManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YILTableViewManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		189E9F0A20B7BEBD0082D8F8 /* YILTableViewManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YILTableViewManagerTests.swift; sourceTree = "<group>"; };
+		189E9F0C20B7BEBD0082D8F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		189E9EF820B7BEBD0082D8F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		189E9F0220B7BEBD0082D8F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				189E9F0620B7BEBD0082D8F8 /* YILTableViewManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		189E9EF220B7BEBD0082D8F8 = {
+			isa = PBXGroup;
+			children = (
+				189E9EFE20B7BEBD0082D8F8 /* YILTableViewManager */,
+				189E9F0920B7BEBD0082D8F8 /* YILTableViewManagerTests */,
+				189E9EFD20B7BEBD0082D8F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		189E9EFD20B7BEBD0082D8F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				189E9EFC20B7BEBD0082D8F8 /* YILTableViewManager.framework */,
+				189E9F0520B7BEBD0082D8F8 /* YILTableViewManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		189E9EFE20B7BEBD0082D8F8 /* YILTableViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				189E9EFF20B7BEBD0082D8F8 /* YILTableViewManager.h */,
+				189E9F0020B7BEBD0082D8F8 /* Info.plist */,
+			);
+			path = YILTableViewManager;
+			sourceTree = "<group>";
+		};
+		189E9F0920B7BEBD0082D8F8 /* YILTableViewManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				189E9F0A20B7BEBD0082D8F8 /* YILTableViewManagerTests.swift */,
+				189E9F0C20B7BEBD0082D8F8 /* Info.plist */,
+			);
+			path = YILTableViewManagerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		189E9EF920B7BEBD0082D8F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				189E9F0D20B7BEBD0082D8F8 /* YILTableViewManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		189E9EFB20B7BEBD0082D8F8 /* YILTableViewManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 189E9F1020B7BEBD0082D8F8 /* Build configuration list for PBXNativeTarget "YILTableViewManager" */;
+			buildPhases = (
+				189E9EF720B7BEBD0082D8F8 /* Sources */,
+				189E9EF820B7BEBD0082D8F8 /* Frameworks */,
+				189E9EF920B7BEBD0082D8F8 /* Headers */,
+				189E9EFA20B7BEBD0082D8F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YILTableViewManager;
+			productName = YILTableViewManager;
+			productReference = 189E9EFC20B7BEBD0082D8F8 /* YILTableViewManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		189E9F0420B7BEBD0082D8F8 /* YILTableViewManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 189E9F1320B7BEBD0082D8F8 /* Build configuration list for PBXNativeTarget "YILTableViewManagerTests" */;
+			buildPhases = (
+				189E9F0120B7BEBD0082D8F8 /* Sources */,
+				189E9F0220B7BEBD0082D8F8 /* Frameworks */,
+				189E9F0320B7BEBD0082D8F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				189E9F0820B7BEBD0082D8F8 /* PBXTargetDependency */,
+			);
+			name = YILTableViewManagerTests;
+			productName = YILTableViewManagerTests;
+			productReference = 189E9F0520B7BEBD0082D8F8 /* YILTableViewManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		189E9EF320B7BEBD0082D8F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = apple;
+				TargetAttributes = {
+					189E9EFB20B7BEBD0082D8F8 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					189E9F0420B7BEBD0082D8F8 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 189E9EF620B7BEBD0082D8F8 /* Build configuration list for PBXProject "YILTableViewManager" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 189E9EF220B7BEBD0082D8F8;
+			productRefGroup = 189E9EFD20B7BEBD0082D8F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				189E9EFB20B7BEBD0082D8F8 /* YILTableViewManager */,
+				189E9F0420B7BEBD0082D8F8 /* YILTableViewManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		189E9EFA20B7BEBD0082D8F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		189E9F0320B7BEBD0082D8F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		189E9EF720B7BEBD0082D8F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		189E9F0120B7BEBD0082D8F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				189E9F0B20B7BEBD0082D8F8 /* YILTableViewManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		189E9F0820B7BEBD0082D8F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 189E9EFB20B7BEBD0082D8F8 /* YILTableViewManager */;
+			targetProxy = 189E9F0720B7BEBD0082D8F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		189E9F0E20B7BEBD0082D8F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		189E9F0F20B7BEBD0082D8F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		189E9F1120B7BEBD0082D8F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 685DPV4URE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YILTableViewManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yilia.YILTableViewManager;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		189E9F1220B7BEBD0082D8F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 685DPV4URE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YILTableViewManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yilia.YILTableViewManager;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		189E9F1420B7BEBD0082D8F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 685DPV4URE;
+				INFOPLIST_FILE = YILTableViewManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yilia.YILTableViewManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		189E9F1520B7BEBD0082D8F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 685DPV4URE;
+				INFOPLIST_FILE = YILTableViewManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yilia.YILTableViewManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		189E9EF620B7BEBD0082D8F8 /* Build configuration list for PBXProject "YILTableViewManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				189E9F0E20B7BEBD0082D8F8 /* Debug */,
+				189E9F0F20B7BEBD0082D8F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		189E9F1020B7BEBD0082D8F8 /* Build configuration list for PBXNativeTarget "YILTableViewManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				189E9F1120B7BEBD0082D8F8 /* Debug */,
+				189E9F1220B7BEBD0082D8F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		189E9F1320B7BEBD0082D8F8 /* Build configuration list for PBXNativeTarget "YILTableViewManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				189E9F1420B7BEBD0082D8F8 /* Debug */,
+				189E9F1520B7BEBD0082D8F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 189E9EF320B7BEBD0082D8F8 /* Project object */;
+}
