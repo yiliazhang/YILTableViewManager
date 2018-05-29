@@ -1,13 +1,13 @@
 # YILTableViewManager
 
 <p align="center">
-<a href="https://travis-ci.org/xmartlabs/YILTableViewManager"><img src="https://travis-ci.org/xmartlabs/YILTableViewManager.svg?branch=master" alt="Build status" /></a>
+<a href="https://travis-ci.org/yiliazhang/YILTableViewManager"><img src="https://travis-ci.org/yiliazhang/YILTableViewManager.svg?branch=master" alt="Build status" /></a>
 <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat" alt="Swift 4 compatible" /></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible" /></a>
 <a href="https://cocoapods.org/pods/YILTableViewManager"><img src="https://img.shields.io/cocoapods/v/YILTableViewManager.svg" alt="CocoaPods compatible" /></a>
-<a href="https://raw.githubusercontent.com/xmartlabs/YILTableViewManager/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
-<a href="https://codebeat.co/projects/github-com-xmartlabs-YILTableViewManager"><img alt="codebeat badge" src="https://codebeat.co/badges/16f29afb-f072-4633-9497-333c6eb71263" /></a>
+<a href="https://raw.githubusercontent.com/yiliazhang/YILTableViewManager/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
+<a href="https://codebeat.co/projects/github-com-yiliazhang-YILTableViewManager"><img alt="codebeat badge" src="https://codebeat.co/badges/16f29afb-f072-4633-9497-333c6eb71263" /></a>
 </p>
 
 
@@ -301,7 +301,7 @@ $ pod install
 Specify YILTableViewManager into your project's `Cartfile`:
 
 ```ogdl
-github "xmartlabs/YILTableViewManager" ~> 4.0
+github "yiliazhang/YILTableViewManager" ~> 4.0
 ```
 
 #### Manually as Embedded Framework
@@ -309,7 +309,7 @@ github "xmartlabs/YILTableViewManager" ~> 4.0
 * Clone YILTableViewManager as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command from your project root git folder.
 
 ```bash
-$ git submodule add https://github.com/xmartlabs/YILTableViewManager.git
+$ git submodule add https://github.com/yiliazhang/YILTableViewManager.git
 ```
 
 * Open YILTableViewManager folder that was created by the previous git submodule command and drag the YILTableViewManager.xcodeproj into the Project Navigator of your application's Xcode project.
