@@ -30,7 +30,7 @@ open class TableViewManager: NSObject {
     }
 
     open func insert(_ newElement: ModelManager, at: Int) {
-        assert(at > 0, "index 必须 >= 0")
+        assert(at >= 0, "index 必须 >= 0")
 
         newElement.addObserver(self, forKeyPath: key, options: [.new, .old], context: nil)
         if _items.count <= at {
@@ -41,7 +41,7 @@ open class TableViewManager: NSObject {
     }
 
     open func insert(_ newElements: [ModelManager], at: Int) {
-        assert(at > 0, "index 必须 >= 0")
+        assert(at >= 0, "index 必须 >= 0")
         if newElements.isEmpty {
             return
         }
@@ -53,7 +53,7 @@ open class TableViewManager: NSObject {
     }
 
     open func remove(at: Int) {
-        assert(at > 0, "index 必须 >= 0")
+        assert(at >= 0, "index 必须 >= 0")
         if _items.count <= at {
             return
         }
@@ -165,7 +165,7 @@ extension TableViewManager: UITableViewDelegate, UITableViewDataSource {
         let modelManager = _items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: modelManager.cellReuseIdentifier)
         guard let cellOne = cell else {
-            assert(cell != nil, "cell 不存在")
+            assert(cell != nil)
             return UITableViewCell(style: .value1, reuseIdentifier: modelManager.cellReuseIdentifier)
         }
 
