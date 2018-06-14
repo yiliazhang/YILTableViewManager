@@ -7,16 +7,16 @@
 #
 
 Pod::Spec.new do |s|
-
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
+
   #  These will help people to find your library, and whilst it
   #  can feel like a chore to fill in it's definitely to your advantage. The
   #  summary should be tweet-length, and the description more in depth.
   #
 
   s.name         = "YILTableViewManager"
-  s.version      = "1.0.11"
+  s.version      = "1.0.12"
   s.summary      = "YILTableViewManager是一种灵活展现 cell 多状态的第三方开源库"
 
   # This description is used to generate tags and improve search results.
