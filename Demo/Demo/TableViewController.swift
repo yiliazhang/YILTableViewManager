@@ -63,7 +63,7 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         title = "示例"
         tableView.estimatedRowHeight = 44
-        tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableViewAutomaticDimension
         tableViewManager.tableView = tableView
         tableViewManager.append([itemOne, itemTwo, itemFour, itemThree])
 
