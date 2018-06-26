@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YILTableViewManager"
-  s.version      = "1.0.13"
+  s.version      = "1.0.14"
   s.summary      = "YILTableViewManager是一种灵活展现 cell 多状态的第三方开源库"
 
   # This description is used to generate tags and improve search results.
@@ -134,5 +134,5 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-s.swift_version = "4.1"
+s.swift_version = "4.2"
 end
