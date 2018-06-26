@@ -28,7 +28,6 @@ class AppInitializer {
     /// 启动配置
     class func onAppStart() {
 //        IQKeyboardManager.shared.enable = true
-        UIApplication.shared.statusBarStyle = .lightContent
 
         /// appearance 设置
         //        UITabBarController.initializeOnce()
